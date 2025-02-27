@@ -5,7 +5,7 @@ Welcome to my Titanic Survival Prediction Project. This project aims to analyze 
 Using the Titanic dataset, I explored data preprocessing, feature engineering, and multiple classification models, tuning them to achieve the best performance. The final goal was to generate a submission file predicting survival for the test set.
 
 ## Notebook
-View my notebook with detaield steps here: [Advanced_Prototype.ipynb](Code\Advanced_Prototype.ipynb)
+View my notebook with detaield steps here: [Advanced_Prototype.ipynb](Code/Advanced_Prototype.ipynb)
 
 ## The Questions
 Below are the key questions I wanted to answer through this project:
