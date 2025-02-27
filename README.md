@@ -28,6 +28,7 @@ For this project, I used a variety of tools to analyze the dataset and build mod
 - Git & GitHub → Version control and project tracking.
 
 ## ML models i used
+### I trained multiple models to find the best classifier for survival prediction.
 - Random Forest
 - Decision Trees
 - K-Nearest Neighbours
@@ -78,6 +79,9 @@ The dataset consists of two main files:
 ╘════╧═══════════╧════════════════════════════════════╧═════════════╛
 
 ```
+
+## Heatmap correlation matrix for the features
+![Alt text](images/heatmap.png)
 
 ## Libary Used
 ```Python
@@ -168,20 +172,21 @@ Voting Classifier Configurations
 Hard voting classifier with weighted contributions
 Models included: Gradient Boosting, AdaBoost, Extra Trees
 
-## The Machine Learning Models
-### I trained multiple models to find the best classifier for survival prediction.
-
-![alt text](images/models%20results.png)
 
 
 # Final Model & Submission
 ### After evaluating all models, the best-performing model was chosen for the final predictions.
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx x
-x
-x
-x
-xx
 
+![alt text](images/ML%20models%20performance.png)
+
+The results show the accuracy scores of various machine learning models for two different test scenarios. The only difference between TEST 1 and TEST 2 is that TEST 2 was simplified by reducing feature complexity (e.g., reducing the number of fare and age categories).
+
+In general, simplifying the features resulted in a slight performance drop for most models.
+Decision Trees, K-Nearest Neighbors, XGBoost, AdaBoost, and Gradient Boosting saw noticeable declines in accuracy.
+GaussianNB and Support Vector Classifier remained stable or improved slightly.
+
+Voting Classifier 2 performed the best in both tests, achieving 0.78229 in TEST 1 and 0.77751 in TEST 2. This suggests that ensemble methods remained robust despite feature simplification.
+Extra Trees and Voting Classifier 1 also maintained high accuracy scores, though slightly lower in TEST 2.
 
 # Innsight from the Analystis 
 ### Most important features influencing survival:
@@ -197,15 +202,15 @@ xx
 - Feature Engineering: Identifying new useful features to improve predictions.
 - Overfitting: Controlled using regularization and hyperparameter tuning.
 - Pclass and fare had high correlation. Do i drop them, or combine them to create new features?
-- 
+
 
 
 
 # Future Improvements
-- Try Deep Learning models (Neural Networks).
 - Experiment with advanced feature selection.
 - Use stacking classifiers for improved performance.
 - Experiment more with the parameters. Example is hard or soft voting performing the best etc.
+- Test the models performance by testing more with the perameters
 
 ```Python
 vc2 = VotingClassifier([('abc', CV_abc.best_estimator_),
@@ -215,7 +220,7 @@ vc2 = VotingClassifier([('abc', CV_abc.best_estimator_),
 ```
 
 # Final Thoughts
-This project allowed me to explore real-world machine learning workflows, from data preprocessing to model evaluation. The Titanic dataset is a great starting point for classification problems, and the insights gained can be applied to more complex datasets. It was a great introduction to ML and if i had more time then i would try to imporve the results. 
+This project allowed me to explore real-world machine learning workflows, from data preprocessing to model evaluation. The Titanic dataset is a great starting point for classification problems, and the insights gained can be applied to more complex datasets. It was a great introduction to ML and if i had more time then i would try to imporve the models perfromance. 
 
 
 
